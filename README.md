@@ -30,4 +30,19 @@ Akerman, Chantal,1975,Je tu il elle
 python dirwalker.py --root path/to/root/dir --output path/to/output.csv --depth 2
 ```
 
-`depth` is the number of subdirectories that need to be traversed to get to the director name. In the example above, the depth is 2.
+`depth` is the number of subdirectories that need to be traversed to get to the director name. In the example above, the depth is 1.
+
+```
+# depth 1
+├── root/
+│   ├── A
+│   │   ├── Abrahams, Jim
+│   │   │   ├── 2008 - Meet the Spartans
+
+# depth 2
+├── root/
+│   ├── horror movies
+│   │   ├── A
+│   │   │   ├── Abrahams, Jim
+│   │   │   │   ├── 2008 - Meet the Spartans
+```
