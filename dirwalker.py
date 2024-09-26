@@ -26,8 +26,9 @@ for root, dirs, files in os.walk(root_path):
 
     if (len(rel_dirs) == 2 + top):
         director = rel_dirs[-2]
-        match = re.search("^(\d{4})\s*[\u2013\u2015_-]\s*(.*)$", rel_dirs[-1])
-
+        pattern = r"^(\d{4})\s*[-–—_]\s*(.*)$"
+        match = re.search(pattern, rel_dirs[-1])
+        
         if not match:
             continue
         year, title = match.groups()
